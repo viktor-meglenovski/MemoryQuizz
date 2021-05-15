@@ -46,27 +46,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Game.cs">
+    <Compile Include="Forms\Game.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Game.Designer.cs">
+    <Compile Include="Forms\Game.Designer.cs">
       <DependentUpon>Game.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu.cs">
+    <Compile Include="Forms\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
+    <Compile Include="Forms\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameStructure\Circle.cs" />
+    <Compile Include="GameStructure\RandomShapeGenerator.cs" />
+    <Compile Include="GameStructure\Scene.cs" />
+    <Compile Include="GameStructure\Shape.cs" />
+    <Compile Include="GameStructure\Square.cs" />
+    <Compile Include="GameStructure\Triangle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ScoreBoard.cs">
+    <Compile Include="Forms\ScoreBoard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ScoreBoard.Designer.cs">
+    <Compile Include="Forms\ScoreBoard.Designer.cs">
       <DependentUpon>ScoreBoard.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Menu.resx">
+    <EmbeddedResource Include="Forms\Game.resx">
+      <DependentUpon>Game.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -78,7 +87,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ScoreBoard.resx">
+    <EmbeddedResource Include="Forms\ScoreBoard.resx">
       <DependentUpon>ScoreBoard.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
