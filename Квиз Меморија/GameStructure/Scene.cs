@@ -18,7 +18,7 @@ namespace Квиз_Меморија.GameStructure
         }
         public void generate()
         {
-            RandomShapeGenerator rsg = new RandomShapeGenerator(game.Size.Width, game.Size.Height);
+            RandomShapeGenerator rsg = new RandomShapeGenerator(game.Size.Width-120, game.Size.Height-150);
             Shapes = rsg.generateShapes();
         }
         public void drawAllShapes(Graphics g)
@@ -26,7 +26,9 @@ namespace Квиз_Меморија.GameStructure
             foreach(Shape s in Shapes)
             {
                 s.draw(g);
+                //s.drawRectangle(g);
             }
         }
+
     }
 }
