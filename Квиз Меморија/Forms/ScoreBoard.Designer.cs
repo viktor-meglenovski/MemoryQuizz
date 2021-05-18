@@ -49,6 +49,7 @@ namespace Квиз_Меморија
             this.ClientSize = new System.Drawing.Size(608, 591);
             this.Controls.Add(this.btnBack);
             this.Name = "ScoreBoard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ScoreBoard";
             this.ResumeLayout(false);
 

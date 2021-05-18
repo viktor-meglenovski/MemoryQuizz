@@ -16,9 +16,16 @@ namespace Квиз_Меморија.GameStructure
             this.Shapes = new List<Shape>();
             this.game = game;
         }
+        public Scene(Scene s)
+        {
+            this.Shapes = new List<Shape>();
+            foreach (Shape shape in s.Shapes)
+                this.Shapes.Add(shape);
+            this.game = s.game;
+        }
         public void generate()
         {
-            RandomShapeGenerator rsg = new RandomShapeGenerator(game.Size.Width, game.Size.Height);
+            RandomShapeGenerator rsg = new RandomShapeGenerator(game.Size.Width-120, game.Size.Height-150);
             Shapes = rsg.generateShapes();
         }
         public void drawAllShapes(Graphics g)
@@ -28,5 +35,6 @@ namespace Квиз_Меморија.GameStructure
                 s.draw(g);
             }
         }
+
     }
 }

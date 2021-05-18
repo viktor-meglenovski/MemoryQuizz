@@ -17,6 +17,10 @@ namespace Квиз_Меморија
         public Menu()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.StartPosition = FormStartPosition.CenterScreen;
             game = new Game(this);
             scoreBoard = new ScoreBoard(this);
         }
