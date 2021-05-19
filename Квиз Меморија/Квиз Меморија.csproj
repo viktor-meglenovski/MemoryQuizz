@@ -59,6 +59,8 @@
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="GameStructure\Circle.cs" />
+    <Compile Include="GameStructure\Question.cs" />
+    <Compile Include="GameStructure\RandomQuestionsGenerator.cs" />
     <Compile Include="GameStructure\RandomShapeGenerator.cs" />
     <Compile Include="GameStructure\Scene.cs" />
     <Compile Include="GameStructure\Shape.cs" />

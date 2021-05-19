@@ -16,6 +16,7 @@ namespace Квиз_Меморија
         public ScoreBoard(Menu menu)
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
             this.menu = menu;
         }
 

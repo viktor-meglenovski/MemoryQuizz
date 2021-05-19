@@ -72,7 +72,11 @@ namespace Квиз_Меморија
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnScoreBoard);
             this.Controls.Add(this.btnStart);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Menu";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.ResumeLayout(false);
 
