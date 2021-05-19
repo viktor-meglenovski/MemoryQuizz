@@ -33,7 +33,6 @@ namespace Квиз_Меморија.GameStructure
             foreach(Shape s in Shapes)
             {
                 s.draw(g);
-                //s.drawRectangle(g);
             }
         }
 

@@ -36,20 +36,11 @@ namespace Квиз_Меморија
         private void Game_Paint(object sender, PaintEventArgs e)
         {
             scene.drawAllShapes(e.Graphics);
-            Pen p = new Pen(Color.Red);
-            Console.WriteLine(this.Width + " " + this.Height);
-            e.Graphics.DrawRectangle(p,50,50,this.Width-120,this.Height-150);
-            p.Dispose();
-        }
-        private void startGame()
-        {
-            timerCountToStart.Enabled = true;
         }
         public void startGame()
         {
             timerCountToStart.Enabled = true;
         }
-
         private void timerCountToStart_Tick(object sender, EventArgs e)
         {
             lblCountSeconds.Text = (Convert.ToInt32(lblCountSeconds.Text) - 1).ToString();
