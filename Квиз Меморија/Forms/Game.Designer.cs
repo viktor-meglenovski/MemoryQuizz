@@ -427,6 +427,7 @@ namespace Квиз_Меморија
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(230)))), ((int)(((byte)(180)))));
             this.ClientSize = new System.Drawing.Size(1287, 729);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.lblCountSeconds);
