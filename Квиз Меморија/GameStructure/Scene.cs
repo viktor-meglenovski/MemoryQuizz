@@ -11,10 +11,12 @@ namespace Квиз_Меморија.GameStructure
     {
         public List<Shape> Shapes { get; set; }
         public Game game { get; set; }
-        public Scene(Game game)
+        public int DifficultyLevel { get; set; }
+        public Scene(Game game,int difficultyLevel)
         {
             this.Shapes = new List<Shape>();
             this.game = game;
+            this.DifficultyLevel = difficultyLevel; //0-easy 1-normal 2-hard
         }
         public Scene(Scene s)
         {
@@ -25,7 +27,13 @@ namespace Квиз_Меморија.GameStructure
         }
         public void generate()
         {
-            RandomShapeGenerator rsg = new RandomShapeGenerator(game.Size.Width-120, game.Size.Height-150);
+            RandomShapeGenerator rsg = null;
+            if(DifficultyLevel==0)
+                rsg=new RandomShapeGenerator(game.Size.Width-120, game.Size.Height-150,5,11);
+            else if(DifficultyLevel==1)
+                rsg = new RandomShapeGenerator(game.Size.Width - 120, game.Size.Height - 150,10,21);
+            else
+                rsg = new RandomShapeGenerator(game.Size.Width - 120, game.Size.Height - 150,15,30);
             Shapes = rsg.generateShapes();
         }
         public void drawAllShapes(Graphics g)

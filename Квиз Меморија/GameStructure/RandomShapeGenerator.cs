@@ -7,25 +7,27 @@ using System.Threading.Tasks;
 
 namespace Квиз_Меморија.GameStructure
 {
-
-
     public class RandomShapeGenerator
     {
         public static Color[] Colors = { Color.Red, Color.Blue, Color.Green };
         public enum Shapes { Square, Circle, Triangle }
         public int maxX { get; set; }
         public int maxY { get; set; }
+        public int minNumberOfShapes { get; set; }
+        public int maxNumberOfShapes { get; set; }
         public Random random { get; set; }
-        public RandomShapeGenerator(int maxX, int maxY)
+        public RandomShapeGenerator(int maxX, int maxY,int minNumberOfShapes,int maxNumberOfShapes)
         {
             this.maxX = maxX;
             this.maxY = maxY;
             this.random = new Random();
+            this.minNumberOfShapes = minNumberOfShapes;
+            this.maxNumberOfShapes = maxNumberOfShapes;
         }
         public List<Shape> generateShapes()
         {
             List<Shape> RandomShapes = new List<Shape>();
-            int counter = random.Next(5, 20);
+            int counter = random.Next(minNumberOfShapes, maxNumberOfShapes);
             for(int i=0;i<counter;i++)
             {
                 Color color = Colors.ElementAt(random.Next(0, 3));

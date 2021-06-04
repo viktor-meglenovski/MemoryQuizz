@@ -14,7 +14,6 @@ namespace Квиз_Меморија.GameStructure
         {
             Brush b = new SolidBrush(color);
             int sizeInt = (int)size;
-            Console.WriteLine(sizeInt);
             g.FillRectangle(b, center.X - sizeInt / 2, center.Y - sizeInt / 2, sizeInt, sizeInt);
             b.Dispose();
         }

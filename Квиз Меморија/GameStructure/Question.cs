@@ -30,7 +30,7 @@ namespace Квиз_Меморија.GameStructure
         }
         public string resultText()
         {
-            return isCorrect ? "Correct!" : "Wrong answer! The correct answer is " + answer;
+            return isCorrect ? "Correct!" : "Wrong answer!\r\nThe correct answer is " + answer;
         }
     }
 }
